@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Layout from './components/Layout'
+import Users from './screens/Users'
+import Posts from './screens/Posts'
+import store from './config/store'
+import { Provider } from 'react-redux'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const usersUrl = "https://jsonplaceholder.typicode.com/users"
+const postsUrl = "https://jsonplaceholder.typicode.com/posts" 
+
+    
+const App = () => { 
+
+	return <Provider store={store}>
+		<BrowserRouter>
+			<Layout>
+				<Switch>
+					<Route exact path='/' render={()=><Users url={usersUrl} />} />
+					<Route path='/publicaciones/:key' render={()=><Posts postsUrl={postsUrl}
+					usersUrl={usersUrl} />} />
+				</Switch>
+			</Layout>
+		</BrowserRouter>
+	</Provider>
 }
 
 export default App;

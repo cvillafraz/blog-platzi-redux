@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component Matches app snapshot 1`] = `
+Array [
+  <nav
+    id="menu"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Usuarios
+    </a>
+    <a
+      href="/tareas"
+      onClick={[Function]}
+    >
+      Tareas
+    </a>
+  </nav>,
+  <div
+    className="margen"
+  >
+    <h2>
+      Usuarios
+    </h2>
+    <table
+      className="tabla"
+    >
+      <thead>
+        <tr>
+          <th>
+            Nombre
+          </th>
+          <th>
+            Correo
+          </th>
+          <th>
+            Enlace
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>,
+]
+`;
