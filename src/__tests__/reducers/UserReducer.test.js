@@ -1,5 +1,5 @@
 import userReducer from '../../config/reducers/userReducer'
-import * as types from '../../config/actions/types'
+import * as types from '../../config/actions/users/types'
 describe('user reducer', () => {
     it('returns the initial state', () => {
         expect(userReducer(undefined, {})).toEqual({
@@ -35,8 +35,7 @@ describe('user reducer', () => {
     it('returns loading', () => {
         expect(userReducer(undefined,
             {
-                type: types.USERS_LOADING,
-                payload: true
+                type: types.LOADING,
             }
         )).toEqual({
             items: [],
@@ -46,7 +45,7 @@ describe('user reducer', () => {
     })
     it('returns error when users fetch fails', () => {
         expect(userReducer(undefined, {
-            type: types.USERS_ERROR,
+            type: types.ERROR,
             payload: 'not found'
         })).toEqual({
             items: [],

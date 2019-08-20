@@ -32,7 +32,7 @@ describe('rendering users', () => {
   test('loads and displays users if successfully fetched', async () => {
 
     let usersComponent = null
-    let url = '/greeting'
+    let url = 'https://jsonplaceholder.typicode.com/users'
 
     await act(() => {
       axiosMock.get.mockResolvedValueOnce({

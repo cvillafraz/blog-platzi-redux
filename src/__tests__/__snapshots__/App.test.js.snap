@@ -2,30 +2,42 @@
 
 exports[`App component Matches app snapshot 1`] = `
 Array [
-  <nav
+  <header
+    className="bg-dark sticky-top"
     id="menu"
   >
-    <a
-      href="/"
-      onClick={[Function]}
+    <nav
+      className="navbar navbar-expand container"
     >
-      Usuarios
-    </a>
-    <a
-      href="/tareas"
-      onClick={[Function]}
-    >
-      Tareas
-    </a>
-  </nav>,
+      <a
+        aria-current="page"
+        className="nav-link text-light pl-0 active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Usuarios
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link text-light"
+        href="/tareas"
+        onClick={[Function]}
+      >
+        Tareas
+      </a>
+    </nav>
+  </header>,
   <div
-    className="margen"
+    className="container mt-5"
   >
-    <h2>
+    <h1
+      className="display-4"
+    >
       Usuarios
-    </h2>
+    </h1>
     <table
-      className="tabla"
+      className="table table-borderless mt-4"
     >
       <thead>
         <tr>
