@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import Menu from './Menu'
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
     return (
         <Fragment>
             <Menu />
-            <div className="margen">
+            <div className="container mt-5">
                 {children}
             </div>
         </Fragment>

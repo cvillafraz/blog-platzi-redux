@@ -1,30 +1,11 @@
-.margen {
-	margin: 100px;
-}
-
-.tabla {
-	width: 100%;
-	text-align: left;
-}
-
-.tabla td {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
 #menu {
-	background-color: #253A46;
 	padding: 20px;
 	font-size: 20px;
 }
-
-#menu a {
-	color: white;
-	padding-right: 50px;
+#comments li {
+	margin: 15px 0 15px 0;
+	list-style-type: none;
 }
-
-body {
-	margin: 0;
-}
-.pub_titulo {
-	border-top: 1px solid black;
+.card-title{
+	font-size: 1.8em;
 }

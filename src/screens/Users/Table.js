@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import '@fortawesome/fontawesome-free/css/all.css'
 const Table = ({ users }) => (
-    <table className="tabla">
+    <table className="table table-borderless mt-4">
         <thead>
             <tr>
                 <th>
@@ -23,10 +23,10 @@ const Table = ({ users }) => (
                     <td>{item.email}</td>
                     <td>{item.website}</td>
                     <td>
-				<Link to={ `/publicaciones/${item.id}` }>
-					<span className="fas fa-eye"></span>
-				</Link>
-			</td>
+                        <Link to={`/publicaciones/${i}`}>
+                            <span className="fas fa-eye"></span>
+                        </Link>
+                    </td>
                 </tr>
             ))}
         </tbody>
