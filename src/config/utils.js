@@ -6,11 +6,11 @@ const SUPPRESSED_PREFIXES = [
     "Warning: An update to %s inside a test was not wrapped in act(...)",
 ];
 
-function isSuppressedErrorMessage(message){
+function isSuppressedErrorMessage(message) {
     return SUPPRESSED_PREFIXES.some(sp => message.startsWith(sp));
 }
 
-export async function act(f){
+export async function act(f) {
     const oldError = window.console.error;
     window.console.error = (...args) => {
         if (!isSuppressedErrorMessage(args[0])) {
@@ -19,12 +19,4 @@ export async function act(f){
     };
     await Promise.race([reactAct(f), new Promise(res => setTimeout(res))]);
     window.console.error = oldError;
-}
-export async function getData(dispatch, action, url){
-    try {
-        let { data } = await axios.get(url)
-        dispatch(action(data))
-      } catch (err) {
-        dispatch(action('Algo salió mal, intente mas tarde'))
-      }
 }

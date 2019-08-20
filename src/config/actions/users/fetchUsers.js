@@ -1,21 +1,21 @@
-import { FETCH_USERS, USERS_LOADING, USERS_ERROR } from '../types'
+import { FETCH_USERS, LOADING, ERROR } from './types'
+import axios from 'axios'
+export default async dispatch => {
+        dispatch({
+                type: LOADING
+        });
 
-export default (data) => {
-        if (typeof data === 'string') {
-                return {
-                        type: USERS_ERROR,
-                        payload: 'Usuario(s) no disponible(s)'
-                }
-        } else if (!data) {
-                return {
-                        type: USERS_LOADING,
-                        payload: true
-                }
-        } else {
-                return {
+        try {
+                const res = await axios.get('https://jsonplaceholder.typicode.com/users');
+                dispatch({
                         type: FETCH_USERS,
-                        payload: data
-                }
+                        payload: res.data
+                })
         }
-
+        catch (error) {
+                dispatch({
+                        type: ERROR,
+                        payload: 'Información de usuario no disponible.'
+                })
+        }
 }

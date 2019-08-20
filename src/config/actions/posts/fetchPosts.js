@@ -1,25 +1,49 @@
-import { FETCH_POSTS, POSTS_LOADING, POSTS_ERROR } from '../types'
+import { FETCH_POSTS, LOADING, ERROR } from './types'
+import { FETCH_USERS } from '../users/types'
+import axios from 'axios'
 
-export default (data) => {
-        if (typeof data === 'string') {
-                return {
-                        type: POSTS_ERROR,
-                        payload: 'Publicaciones no disponibles'
-                }
-        } else if (data === true) {
-                return {
-                        type: POSTS_LOADING,
-                        payload: data
-                }
-        } else {
-                return {
+export default async (key, { dispatch, getState }) => {
+        dispatch({
+                type: LOADING
+        });
+
+        let users = getState().users.items;
+        const posts = getState().posts.items;
+        const userId = users[key].id;
+        try {
+                const res = await axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`);
+                const newPosts = res.data.map((post) => ({
+                        ...post,
+                        comments: [],
+                        open: false
+                }));
+                const updatedPosts = [
+                        ...posts,
+                        newPosts
+                ];
+
+                dispatch({
                         type: FETCH_POSTS,
-                        payload: data.map(post => ({
-                                ...post,
-                                comments: [],
-                                open: false
-                        }))
-                }
-        }
+                        payload: updatedPosts
+                });
 
+                const posts_key = updatedPosts.length - 1;
+                const updatedUsers = [...users];
+                updatedUsers[key] = {
+                        ...users[key],
+                        posts_key
+                };
+
+                dispatch({
+                        type: FETCH_USERS,
+                        payload: updatedUsers
+                });
+        }
+        catch (error) {
+                console.log(error.message);
+                dispatch({
+                        type: ERROR,
+                        payload: 'Publicaciones no disponibles.'
+                });
+        }
 }

@@ -1,7 +1,0 @@
-export const FETCH_USERS = 'FETCH_USERS'
-export const USERS_LOADING = 'USERS_LOADING'
-export const USERS_ERROR = 'USERS_ERROR'
-export const FETCH_POSTS = 'FETCH_POSTS'
-export const POSTS_LOADING = 'POSTS_LOADING'
-export const POSTS_ERROR = 'POSTS_ERROR'
-export const TOGGLE_COMMENTS = 'TOGGLE_COMMENTS'
