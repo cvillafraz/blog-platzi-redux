@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3e7c473c97790f68fdee17a19cc999a8",
+    "revision": "5580757f76ffe2c4f5b2742e8a6da2b7",
     "url": "/blog-platzi-redux/index.html"
   },
   {
-    "revision": "56ffd40881a74bb11449",
+    "revision": "9900b3c14616db3c63e7",
     "url": "/blog-platzi-redux/static/css/2.c63a6383.chunk.css"
   },
   {
-    "revision": "71692648c719c9cb4900",
-    "url": "/blog-platzi-redux/static/css/main.e2e5e45a.chunk.css"
+    "revision": "152c51a15ce2bb479cf6",
+    "url": "/blog-platzi-redux/static/css/main.b801a727.chunk.css"
   },
   {
-    "revision": "56ffd40881a74bb11449",
-    "url": "/blog-platzi-redux/static/js/2.d171fc2f.chunk.js"
+    "revision": "9900b3c14616db3c63e7",
+    "url": "/blog-platzi-redux/static/js/2.8bd95313.chunk.js"
   },
   {
-    "revision": "71692648c719c9cb4900",
-    "url": "/blog-platzi-redux/static/js/main.7fd14bcc.chunk.js"
+    "revision": "152c51a15ce2bb479cf6",
+    "url": "/blog-platzi-redux/static/js/main.77fc4359.chunk.js"
   },
   {
     "revision": "1a1f63a00e78d6bfffd2",
