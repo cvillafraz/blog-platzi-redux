@@ -1,14 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Menu from './Menu'
+
 const Layout = ({ children }) => {
-    return (
-        <Fragment>
-            <Menu />
-            <div className="container mt-5">
-                {children}
-            </div>
-        </Fragment>
-    )
+	return (
+		<>
+			<Menu />
+			<div className="container mt-5">{children}</div>
+		</>
+	)
 }
 
 export default Layout

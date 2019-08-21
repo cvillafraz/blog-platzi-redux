@@ -10,18 +10,17 @@ Array [
       className="navbar navbar-expand container"
     >
       <a
-        aria-current="page"
-        className="nav-link text-light pl-0 active"
-        href="/"
+        aria-current={null}
+        className="nav-link text-light pl-0"
+        href="/blog-platzi-redux"
         onClick={[Function]}
-        style={Object {}}
       >
         Usuarios
       </a>
       <a
         aria-current={null}
         className="nav-link text-light"
-        href="/tareas"
+        href="/blog-platzi-redux/tareas"
         onClick={[Function]}
       >
         Tareas
@@ -31,29 +30,12 @@ Array [
   <div
     className="container mt-5"
   >
-    <h1
-      className="display-4"
+    <h2
+      className="center"
+      data-testid="message"
     >
-      Usuarios
-    </h1>
-    <table
-      className="table table-borderless mt-4"
-    >
-      <thead>
-        <tr>
-          <th>
-            Nombre
-          </th>
-          <th>
-            Correo
-          </th>
-          <th>
-            Enlace
-          </th>
-        </tr>
-      </thead>
-      <tbody />
-    </table>
+      No se encontró la página que buscabas
+    </h2>
   </div>,
 ]
 `;
