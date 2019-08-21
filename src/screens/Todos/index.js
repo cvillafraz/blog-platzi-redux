@@ -71,7 +71,7 @@ const Todos = () => {
 	return (
 		<main>
 			<button className="btn btn-success">
-				<Link to="/tareas/guardar" className="text-light">
+				<Link to="/blog-platzi-redux/tareas/guardar" className="text-light">
 					Agregar
 				</Link>
 			</button>
