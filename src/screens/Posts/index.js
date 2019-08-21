@@ -85,7 +85,7 @@ const Posts = ({ match }) => {
 							className="text-info border-0 bg-transparent text-left pl-0"
 							onClick={() => displayComments(posts_key, index, post.comments)}
 						>
-							{!post.open ? 'Show' : 'Close'} comments
+							{!post.open ? 'Mostrar' : 'Cerrar'} comentarios
 						</button>
 					</div>
 
